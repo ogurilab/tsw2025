@@ -20,33 +20,3 @@ title: お問い合わせ
         </div>
     </div>
 </div>
-
-<!-- <div class="grid grid-2" style="margin-top: 2rem;">
-    <!-- <div class="card">
-        <div class="card-title">よくあるご質問</div>
-        <div class="card-content">
-            {% for item in site.data.contact_info.faq %}
-            <h4>Q: {{ item.question }}</h4>
-            <p>A: {{ item.answer }}</p>
-            {% endfor %}
-        </div>
-    </div>
-    
-    <div class="card">
-        <div class="card-title">お問い合わせ内容例</div>
-        <div class="card-content">
-            <ul>
-                {% for example in site.data.contact_info.inquiry_examples %}
-                <li>{{ example }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div> -->
-<!-- </div> --> 
-
-<!-- <div class="card">
-    <div class="card-title">最新情報</div>
-    <div class="card-content">
-        <p>{{ site.data.contact_info.social_media.description }}</p>
-    </div>
-</div> -->
