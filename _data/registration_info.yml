@@ -1,0 +1,36 @@
+# 登録関連の情報
+submission:
+  title: "参加・発表申込"
+  deadline: "2025年9月1日（月）"
+  description: "発表の方，聴講のみの方も全てこちらのフォームから登録をお願いいたします．"
+  form_url: "https://docs.google.com/forms/d/e/1FAIpQLSdVUY9VTkQQ-gL2kgGGBLa_XUFWiPzatx9ofsKlzQn1xUI39w/viewform?usp=dialog"
+  form_status: "受付中"
+  
+registration:
+  title: "参加登録"
+  deadline: "2025年8月31日（月）"
+  description: "聴講のみの参加も歓迎します。参加登録をお願いします。"
+  form_url: "#"
+  form_status: "準備中"
+
+# 発表申込に必要な情報
+submission_requirements:
+  - "発表者情報（氏名、所属、連絡先）"
+  - "発表タイトル"
+  - "発表概要（200字程度）"
+  - "希望発表形式（口頭発表 / ポスター発表）"
+  - "発表分野"
+
+# 予稿について
+proceedings:
+  page_limit: "A4サイズ 2ページ（厳守）"
+  format: "PDFファイル形式"
+  template: "テンプレートは採択通知時に配布"
+  deadline: "2025年8月20日"
+
+# 注意事項
+notes:
+  - "参加費は無料ですが、事前登録が必要です"
+  - "懇親会に参加される方は別途懇親会費が必要です"
+  - "発表申込多数の場合は、実行委員会で選考を行う場合があります"
+  - "登録後のキャンセルは、8月25日までにご連絡ください"

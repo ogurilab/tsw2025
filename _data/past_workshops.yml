@@ -1,0 +1,10 @@
+# 過去の東海サマーワークショップのリンク
+# 新しいワークショップを追加する場合は、上に追加してください（新しい順）
+
+workshops:
+  - year: "2024"
+    name: "TSW2024"
+    url: "https://sawanolab.aitech.ac.jp/tsw2024/"
+    host: "愛知工業大学"
+
+    

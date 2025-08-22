@@ -1,0 +1,28 @@
+# カルーセル画像設定
+# 画像を追加・編集する場合は、このファイルを編集してください
+# imageには画像のパス、titleには画像のタイトル、captionには説明文を記載
+
+slides:
+  - image: "https://i.gyazo.com/ce5efdcf00abbb54b557b4002aca6111.png"
+    title: ""
+    caption: ""
+    
+  - image: "https://i.gyazo.com/c7812a4a6fb68fce12bc9337085822aa.png"
+    title: ""
+    caption: ""
+    
+  - image: "https://i.gyazo.com/3c6056a4cde154f77747cba69605f84f.png"
+    title: ""
+    caption: ""
+    
+  - image: "https://i.gyazo.com/4b0baf03defdd7e7d39be300c279f223.png"
+    title: ""
+    caption: ""
+    
+
+# カルーセルの設定
+settings:
+  autoplay: true
+  interval: 5000  # ミリ秒
+  show_indicators: true
+  show_arrows: true

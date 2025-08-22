@@ -1,0 +1,45 @@
+title: 東海サマーワークショップ2025
+email: 
+description: >-
+  東海地区の大学研究室有志による研究発表会
+baseurl: "/tsw2025"
+url: ""
+twitter_username: 
+github_username: 
+
+# Build settings
+theme: 
+plugins:
+  - jekyll-feed
+
+# Workshop settings
+event_dates: "2025年9月9日（火）- 10日（水）"
+registration_deadline: "2025年8月31日"
+
+# Collections
+collections:
+  news:
+    output: false
+    sort_by: date
+  sessions:
+    output: false
+  speakers:
+    output: false
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude files
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

@@ -1,0 +1,117 @@
+<div class="carousel">
+    <div class="carousel-inner">
+        {% for slide in site.data.carousel.slides %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+            <img src="{{ slide.image }}" alt="{{ slide.title }}">
+            <div class="carousel-caption">
+                <h2>{{ slide.title }}</h2>
+                <p>{{ slide.caption }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    {% if site.data.carousel.settings.show_indicators %}
+    <div class="carousel-indicators">
+        {% for slide in site.data.carousel.slides %}
+        <button class="{% if forloop.first %}active{% endif %}" data-slide="{{ forloop.index0 }}" aria-label="スライド {{ forloop.index }}"></button>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if site.data.carousel.settings.show_arrows %}
+    <button class="carousel-control prev" aria-label="前のスライド">
+        <span class="material-icons">chevron_left</span>
+    </button>
+    <button class="carousel-control next" aria-label="次のスライド">
+        <span class="material-icons">chevron_right</span>
+    </button>
+    {% endif %}
+</div>
+
+<script>
+(function() {
+    const carousel = document.querySelector('.carousel');
+    const items = carousel.querySelectorAll('.carousel-item');
+    const indicators = carousel.querySelectorAll('.carousel-indicators button');
+    const prevBtn = carousel.querySelector('.carousel-control.prev');
+    const nextBtn = carousel.querySelector('.carousel-control.next');
+    
+    let currentIndex = 0;
+    const totalSlides = items.length;
+    
+    function showSlide(index) {
+        // Hide all slides
+        items.forEach(item => item.classList.remove('active'));
+        indicators.forEach(indicator => indicator.classList.remove('active'));
+        
+        // Show current slide
+        items[index].classList.add('active');
+        if (indicators[index]) {
+            indicators[index].classList.add('active');
+        }
+        
+        currentIndex = index;
+    }
+    
+    function nextSlide() {
+        const nextIndex = (currentIndex + 1) % totalSlides;
+        showSlide(nextIndex);
+    }
+    
+    function prevSlide() {
+        const prevIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(prevIndex);
+    }
+    
+    // Event listeners for controls
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+    }
+    
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevSlide);
+    }
+    
+    // Event listeners for indicators
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => showSlide(index));
+    });
+    
+    // Auto-play functionality
+    {% if site.data.carousel.settings.autoplay %}
+    let autoplayInterval = setInterval(nextSlide, {{ site.data.carousel.settings.interval }});
+    
+    // Pause on hover
+    carousel.addEventListener('mouseenter', () => {
+        clearInterval(autoplayInterval);
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+        autoplayInterval = setInterval(nextSlide, {{ site.data.carousel.settings.interval }});
+    });
+    {% endif %}
+    
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+    
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            nextSlide();
+        }
+        if (touchEndX > touchStartX + 50) {
+            prevSlide();
+        }
+    }
+})();
+</script>

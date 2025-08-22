@@ -1,0 +1,44 @@
+# イベント基本情報
+title: "東海サマーワークショップ2025"
+subtitle: "東海地区の大学研究室有志による研究発表会"
+dates: "2025年9月9日（火）- 10日（水）"
+time: "両日とも 9:00 - 17:30"
+registration_deadline: "2025年8月31日"
+abstract_deadline: "2025年7月31日"
+paper_deadline: "2025年8月20日"
+
+# 参加費
+fees:
+  participation: "無料"
+  banquet:
+    student: "2,000円"
+    general: "4,000円"
+    
+# 発表形式
+presentation_formats:
+  oral:
+    name: "口頭発表"
+    duration: "13分（発表10分＋質疑3分）"
+  poster:
+    name: "ポスター発表"
+    format: "A0サイズ縦置き"
+    core_time: "60分"
+  keynote:
+    name: "招待講演"
+    duration: "60分"
+    count: "各日1件"
+
+# 参加対象
+target_audience:
+  - "東海地区の大学・研究機関に所属する学生（学部生・大学院生）"
+  - "教員・研究者"
+  - "企業の研究開発部門の方"
+
+# 発表分野
+research_fields:
+  - "情報工学・計算機科学"
+  - "人工知能・機械学習"
+  - "ロボティクス・制御工学"
+  - "通信・ネットワーク"
+  - "ヒューマンインタフェース"
+  - "その他関連分野"
