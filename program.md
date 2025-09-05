@@ -7,7 +7,37 @@ title: プログラム
 
 <div class="card" style="text-align: center; background-color: #fff3e0; border-left: 4px solid #ff6f00;">
     <div class="card-content">
-        <p><strong>プログラムは現在準備中です</strong></p>
+        <p><strong>プログラムの詳細は現在準備中です</strong></p>
+    </div>
+</div>
+
+<h2 style="margin-top: 3rem;">タイムスケジュール</h2>
+
+<div class="card">
+    <div class="card-title">
+        <span class="material-icons" style="color: #1976d2; vertical-align: middle;">schedule</span>
+        開催時間について
+    </div>
+    <div class="card-content">
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr style="background-color: #f5f5f5;">
+                <th style="padding: 0.75rem; border: 1px solid #e0e0e0; width: 150px;">時間</th>
+                <th style="padding: 0.75rem; border: 1px solid #e0e0e0;">内容</th>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">9:30～</td>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">受付開始</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">10:00</td>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">開会</td>
+            </tr>
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0; text-align: center;" colspan="2">
+                    <em style="color: #666;">詳細なプログラムは後日公開予定</em>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 
