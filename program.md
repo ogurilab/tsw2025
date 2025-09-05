@@ -5,15 +5,15 @@ title: プログラム
 
 <h1 class="section-title">プログラム</h1>
 
-<div class="card" style="text-align: center; background-color: #fff3e0; border-left: 4px solid #ff6f00;">
+<!-- <div class="card" style="text-align: center; background-color: #fff3e0; border-left: 4px solid #ff6f00;">
     <div class="card-content">
         <p><strong>プログラムの詳細は現在準備中です</strong></p>
     </div>
-</div>
+</div> -->
 
-<h2 style="margin-top: 3rem;">タイムスケジュール</h2>
+<!-- <h2 style="margin-top: 3rem;">タイムスケジュール</h2> -->
 
-<div class="card">
+<!-- <div class="card">
     <div class="card-title">
         <span class="material-icons" style="color: #1976d2; vertical-align: middle;">schedule</span>
         開催時間について
@@ -39,7 +39,7 @@ title: プログラム
             </tr>
         </table>
     </div>
-</div>
+</div> -->
 
 <h2 style="margin-top: 3rem;">ポスター発表について</h2>
 
@@ -61,7 +61,7 @@ title: プログラム
     </div>
 </div>
 
-<!-- <h2 style="margin-top: 3rem;">プログラム概要（予定）</h2>
+<h2 style="margin-top: 3rem;">プログラム</h2>
 
 <div class="card">
     <div class="card-title">1日目：{{ site.data.schedule.day1.date }}</div>
@@ -72,13 +72,53 @@ title: プログラム
                 <th style="padding: 0.75rem; border: 1px solid #e0e0e0;">内容</th>
             </tr>
             {% for session in site.data.schedule.day1.sessions %}
+            {% if session.type == "break" %}
+            <tr style="background-color: #f0f8ff;">
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0; text-align: center;" colspan="2">
+                    <strong>{{ session.time }}</strong> - {{ session.title }}
+                </td>
+            </tr>
+            {% elsif session.presentations %}
+            {% if session.type == "poster" %}
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">{{ session.time }}</td>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">
+                    <strong>{{ session.title }}</strong><br>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                    {% for presentation in session.presentations %}
+                        <li style="margin: 0.25rem 0;">{{ presentation.speaker }}: {{ presentation.title }}</li>
+                    {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0;" rowspan="{{ session.presentations.size | plus: 1 }}">
+                    {{ session.time }}
+                </td>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0; background-color: #fafafa;">
+                    <strong>{{ session.title }}</strong>
+                </td>
+            </tr>
+            {% for presentation in session.presentations %}
+            <tr>
+                <td style="padding: 0.5rem 0.75rem; border: 1px solid #e0e0e0;">
+                    <span style="color: #666;">{{ presentation.time }}</span><br>
+                    {{ presentation.speaker }}: {{ presentation.title }}
+                </td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+            {% else %}
             <tr>
                 <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">{{ session.time }}</td>
                 <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">
                     {{ session.title }}
                     {% if session.speaker %}（{{ session.speaker }}）{% endif %}
+                    {% if session.presentation_title %}<br>「{{ session.presentation_title }}」{% endif %}
                 </td>
             </tr>
+            {% endif %}
             {% endfor %}
         </table>
     </div>
@@ -93,26 +133,55 @@ title: プログラム
                 <th style="padding: 0.75rem; border: 1px solid #e0e0e0;">内容</th>
             </tr>
             {% for session in site.data.schedule.day2.sessions %}
+            {% if session.type == "break" %}
+            <tr style="background-color: #f0f8ff;">
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0; text-align: center;" colspan="2">
+                    <strong>{{ session.time }}</strong> - {{ session.title }}
+                </td>
+            </tr>
+            {% elsif session.presentations %}
+            {% if session.type == "poster" %}
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">{{ session.time }}</td>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">
+                    <strong>{{ session.title }}</strong><br>
+                    <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
+                    {% for presentation in session.presentations %}
+                        <li style="margin: 0.25rem 0;">{{ presentation.speaker }}: {{ presentation.title }}</li>
+                    {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+            {% else %}
+            <tr>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0;" rowspan="{{ session.presentations.size | plus: 1 }}">
+                    {{ session.time }}
+                </td>
+                <td style="padding: 0.75rem; border: 1px solid #e0e0e0; background-color: #fafafa;">
+                    <strong>{{ session.title }}</strong>
+                </td>
+            </tr>
+            {% for presentation in session.presentations %}
+            <tr>
+                <td style="padding: 0.5rem 0.75rem; border: 1px solid #e0e0e0;">
+                    <span style="color: #666;">{{ presentation.time }}</span><br>
+                    {{ presentation.speaker }}: {{ presentation.title }}
+                </td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+            {% else %}
             <tr>
                 <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">{{ session.time }}</td>
                 <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">
                     {{ session.title }}
                     {% if session.speaker %}（{{ session.speaker }}）{% endif %}
+                    {% if session.presentation_title %}<br>「{{ session.presentation_title }}」{% endif %}
                     {% if session.topic %}「{{ session.topic }}」{% endif %}
                 </td>
             </tr>
+            {% endif %}
             {% endfor %}
         </table>
     </div>
 </div>
-
-<div class="card">
-    <div class="card-title">発表分野（予定）</div>
-    <div class="card-content">
-        <ul>
-            {% for field in site.data.event_info.research_fields %}
-            <li>{{ field }}</li>
-            {% endfor %}
-        </ul>
-    </div>
-</div> -->
