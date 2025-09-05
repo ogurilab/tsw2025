@@ -9,7 +9,7 @@ day1:
       title: "開会式"
       type: "ceremony"
     - time: "10:00 - 11:50"
-      title: "口頭発表セッション1"
+      title: "口頭発表セッション1（14号館202）"
       type: "oral"
       presentations:
         - time: "10:00"
@@ -40,7 +40,7 @@ day1:
       title: "休憩"
       type: "break"
     - time: "11:56 - 12:30"
-      title: "口頭発表セッション2"
+      title: "口頭発表セッション2（14号館202）"
       type: "oral"
       presentations:
         - time: "11:56"
@@ -131,7 +131,7 @@ day2:
       speaker: ""
       presentation_title: ""
     - time: "10:00 - 11:57"
-      title: "口頭発表セッション3"
+      title: "口頭発表セッション3（14号館202）"
       type: "oral"
       presentations:
         - time: "10:00"
@@ -168,7 +168,7 @@ day2:
       title: "休憩"
       type: "break"
     - time: "12:01 - 12:20"
-      title: "口頭発表セッション4"
+      title: "口頭発表セッション4（14号館202）"
       type: "oral"
       presentations:
         - time: "12:01"
