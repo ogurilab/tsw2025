@@ -104,7 +104,16 @@ title: プログラム
                     <strong>{{ session.title }}</strong><br>
                     <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
                     {% for presentation in session.presentations %}
-                        <li style="margin: 0.25rem 0;">{{ presentation.speaker }}: {{ presentation.title }}</li>
+                        <li style="margin: 0.25rem 0;">{{ presentation.speaker }}: 
+                            {% if presentation.abstract %}
+                            <span class="abstract-tooltip">
+                                {{ presentation.title }}
+                                <span class="tooltip-content">{{ presentation.abstract }}</span>
+                            </span>
+                            {% else %}
+                            {{ presentation.title }}
+                            {% endif %}
+                        </li>
                     {% endfor %}
                     </ul>
                 </td>
@@ -122,7 +131,15 @@ title: プログラム
             <tr>
                 <td style="padding: 0.5rem 0.75rem; border: 1px solid #e0e0e0;">
                     <span style="color: #666;">{{ presentation.time }}</span><br>
-                    {{ presentation.speaker }}: {{ presentation.title }}
+                    {{ presentation.speaker }}: 
+                    {% if presentation.abstract %}
+                    <span class="abstract-tooltip">
+                        {{ presentation.title }}
+                        <span class="tooltip-content">{{ presentation.abstract }}</span>
+                    </span>
+                    {% else %}
+                    {{ presentation.title }}
+                    {% endif %}
                 </td>
             </tr>
             {% endfor %}
@@ -165,7 +182,16 @@ title: プログラム
                     <strong>{{ session.title }}</strong><br>
                     <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
                     {% for presentation in session.presentations %}
-                        <li style="margin: 0.25rem 0;">{{ presentation.speaker }}: {{ presentation.title }}</li>
+                        <li style="margin: 0.25rem 0;">{{ presentation.speaker }}: 
+                            {% if presentation.abstract %}
+                            <span class="abstract-tooltip">
+                                {{ presentation.title }}
+                                <span class="tooltip-content">{{ presentation.abstract }}</span>
+                            </span>
+                            {% else %}
+                            {{ presentation.title }}
+                            {% endif %}
+                        </li>
                     {% endfor %}
                     </ul>
                 </td>
@@ -183,7 +209,15 @@ title: プログラム
             <tr>
                 <td style="padding: 0.5rem 0.75rem; border: 1px solid #e0e0e0;">
                     <span style="color: #666;">{{ presentation.time }}</span><br>
-                    {{ presentation.speaker }}: {{ presentation.title }}
+                    {{ presentation.speaker }}: 
+                    {% if presentation.abstract %}
+                    <span class="abstract-tooltip">
+                        {{ presentation.title }}
+                        <span class="tooltip-content">{{ presentation.abstract }}</span>
+                    </span>
+                    {% else %}
+                    {{ presentation.title }}
+                    {% endif %}
                 </td>
             </tr>
             {% endfor %}

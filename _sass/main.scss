@@ -353,6 +353,73 @@ main {
   }
 }
 
+// Tooltip styles for abstract popups
+.abstract-tooltip {
+  position: relative;
+  display: inline;
+  cursor: help;
+  border-bottom: 1px dotted #666;
+  
+  .tooltip-content {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 1000;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 350px;
+    padding: 12px 16px;
+    background-color: rgba(33, 33, 33, 0.95);
+    color: #fff;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+    
+    // Arrow pointing down
+    &::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 8px;
+      border-style: solid;
+      border-color: rgba(33, 33, 33, 0.95) transparent transparent transparent;
+    }
+    
+    @media (max-width: 768px) {
+      width: 280px;
+      font-size: 0.8125rem;
+    }
+  }
+  
+  &:hover .tooltip-content {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.5s; // Delay before showing
+  }
+}
+
+// Alternative positioning for tooltips near edges
+.abstract-tooltip.tooltip-right {
+  .tooltip-content {
+    left: auto;
+    right: 0;
+    transform: translateX(0);
+  }
+}
+
+.abstract-tooltip.tooltip-left {
+  .tooltip-content {
+    left: 0;
+    transform: translateX(0);
+  }
+}
+
 // Carousel
 .carousel {
   position: relative;
