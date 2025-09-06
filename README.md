@@ -12,17 +12,28 @@
 
 ```
 tsw2025/
-├── _data/               # データファイル（YAML形式）
-│   ├── event_info.yml   # イベント基本情報
-│   ├── schedule.yml     # プログラムスケジュール
-│   ├── important_dates.yml # 重要な日程
+├── _data/                    # データファイル（YAML形式）
+│   ├── carousel.yml          # カルーセル（スライドショー）設定
+│   ├── contact_info.yml      # お問い合わせ情報
+│   ├── event_info.yml        # イベント基本情報
+│   ├── important_dates.yml   # 重要な日程
+│   ├── past_workshops.yml    # 過去のワークショップリンク
 │   ├── registration_info.yml # 参加登録情報
-│   ├── venue_info.yml   # 会場情報
-│   └── contact_info.yml # お問い合わせ情報
-├── _news/               # お知らせ（Markdownファイル）
-├── _layouts/            # レイアウトテンプレート
-├── _sass/               # スタイルシート
-└── assets/              # 画像、CSS、JSファイル
+│   ├── schedule.yml          # プログラムスケジュール
+│   └── venue_info.yml        # 会場情報
+├── _includes/               # 再利用可能なコンポーネント
+│   └── carousel.html        # カルーセルコンポーネント
+├── _layouts/                # レイアウトテンプレート
+│   ├── default.html         # 基本レイアウト
+│   ├── home.html            # トップページ用レイアウト
+│   └── page.html            # 汎用ページレイアウト
+├── _news/                   # お知らせ（Markdownファイル）
+├── _sass/                   # スタイルシート
+│   └── main.scss            # メインスタイルシート
+└── assets/                  # 画像、CSS、JSファイル
+    ├── css/
+    │   └── style.scss       # スタイルエントリーポイント
+    └── images/              # 画像ファイル
 ```
 
 ## 情報の編集方法
@@ -63,11 +74,10 @@ draftにする場合は `draft: true` を追加してください。
 
 各ページはMarkdownファイルとデータファイルの組み合わせで構成されています：
 
-- `index.md` - トップページ（_data/event_info.yml、_data/important_dates.ymlを使用）
-- `about.md` - 開催概要（_data/event_info.ymlを使用）
+- `index.md` - トップページ（カルーセル、開催概要、重要日程、お知らせを表示）
 - `program.md` - プログラム（_data/schedule.yml、_data/event_info.ymlを使用）
 - `registration.md` - 参加登録（_data/registration_info.yml、_data/event_info.ymlを使用）
-- `venue.md` - 会場（_data/venue_info.ymlを使用）
+- `venue.md` - 会場（_data/venue_info.ymlを使用、アクセス情報・地図を表示）
 - `contact.md` - お問い合わせ（_data/contact_info.ymlを使用）
 - `privacy.md` - プライバシーポリシー
 
@@ -80,7 +90,9 @@ draftにする場合は `draft: true` を追加してください。
 
 ### 8. 会場情報の更新
 `_data/venue_info.yml` を編集してください。
-- 会場が決定したら、statusを変更し、詳細情報を追加
+- 会場名、住所、施設情報
+- アクセス方法（電車・車・シャトルバス）
+- 駐車場情報
 
 ### 9. お問い合わせ情報の変更
 `_data/contact_info.yml` を編集してください。
@@ -110,9 +122,19 @@ draftにする場合は `draft: true` を追加してください。
 1. このリポジトリをGitHubにプッシュ
 2. Settings > Pages で Source を "Deploy from a branch" に設定
 3. Branch を main、フォルダを / (root) に設定
+4. 数分後、`https://[username].github.io/tsw2025/` でアクセス可能
 
 ## 注意事項
 
 - `_config.yml` の `baseurl` はリポジトリ名に合わせて変更してください
 - 画像を追加する場合は `assets/images/` ディレクトリに配置してください
 - スタイルを変更する場合は `_sass/main.scss` を編集してください
+- カルーセル画像は外部URL（例：Gyazo）も使用可能です
+
+## 主な機能
+
+- **カルーセル（スライドショー）**: トップページに表示、自動再生対応
+- **ドロップダウンメニュー**: 過去のワークショップへのリンク
+- **レスポンシブデザイン**: スマートフォン・タブレット対応
+- **お知らせ機能**: 新着情報を時系列で表示
+- **Markdownサポート**: コンテンツ編集が簡単

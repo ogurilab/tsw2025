@@ -51,6 +51,43 @@ title: 会場
 </div>
 
 <div class="card" style="margin-top: 2rem;">
+    <div class="card-title">飲食施設</div>
+    <div class="card-content">
+        <h4>学内飲食店</h4>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <thead>
+                <tr>
+                    <th style="padding: 0.75rem; border: 1px solid #e0e0e0; background-color: #f5f5f5; text-align: left;">店舗名</th>
+                    <th style="padding: 0.75rem; border: 1px solid #e0e0e0; background-color: #f5f5f5; text-align: left;">営業時間</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for restaurant in site.data.venue_info.restaurants %}
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">{{ restaurant.name }}</td>
+                    <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">{{ restaurant.hours }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        
+        <h4>コンビニエンスストア</h4>
+        <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+            <tbody>
+                <tr>
+                    <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">{{ site.data.venue_info.convenience_store.name }}</td>
+                    <td style="padding: 0.75rem; border: 1px solid #e0e0e0;">{{ site.data.venue_info.convenience_store.hours }}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="background-color: #fff3e0; padding: 1rem; border-radius: 4px; margin: 1rem 0;">
+            <p style="margin: 0;">{{ site.data.venue_info.lunch_info }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="card" style="margin-top: 2rem;">
     <div class="card-title">お問い合わせ</div>
     <div class="card-content">
         <p>会場に関するご質問は、<a href="{{ '/contact' | relative_url }}">お問い合わせページ</a>からご連絡ください。</p>

@@ -41,9 +41,27 @@ title: プログラム
     </div>
 </div> -->
 
-<h2 style="margin-top: 3rem;">ポスター発表について</h2>
+<h2 style="margin-top: 3rem;">発表について</h2>
 
-<div class="card" style="background-color: #e8f5e9; border-left: 4px solid #4caf50;">
+<div class="card" style="background-color: #e3f2fd; border-left: 4px solid #2196f3;">
+    <div class="card-title">
+        <span class="material-icons" style="color: #2196f3; vertical-align: middle;">info</span>
+        口頭発表者の皆様へ
+    </div>
+    <div class="card-content">
+        <p><strong>発表時間について</strong></p>
+        <ul style="margin-top: 1rem; margin-bottom: 1.5rem;">
+            <li>口頭発表は発表者によって発表時間が異なる場合があります</li>
+            <li>プログラムに記載の発表開始時間はおおよその目安となります</li>
+        </ul>
+        <p style="color: #555; font-size: 0.95rem;">
+            <span class="material-icons" style="font-size: 1rem; vertical-align: text-bottom;">tips_and_updates</span>
+            詳細な発表時間については事前にご確認いただきますようお願いいたします
+        </p>
+    </div>
+</div>
+
+<div class="card" style="background-color: #e8f5e9; border-left: 4px solid #4caf50; margin-top: 1rem;">
     <div class="card-title">
         <span class="material-icons" style="color: #4caf50; vertical-align: middle;">info</span>
         ポスター発表者の皆様へ
