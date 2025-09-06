@@ -54,10 +54,10 @@ title: プログラム
             <li>口頭発表は発表者によって発表時間が異なる場合があります</li>
             <li>プログラムに記載の発表開始時間はおおよその目安となります</li>
         </ul>
-        <p style="color: #555; font-size: 0.95rem;">
+        <!-- <p style="color: #555; font-size: 0.95rem;">
             <span class="material-icons" style="font-size: 1rem; vertical-align: text-bottom;">tips_and_updates</span>
             詳細な発表時間については事前にご確認いただきますようお願いいたします
-        </p>
+        </p> -->
     </div>
 </div>
 
