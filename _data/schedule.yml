@@ -125,9 +125,12 @@ day1:
 day2:
   date: "2025年9月10日（水）"
   sessions:
-    - time: "9:30 - 10:00"
+    - time: "9:30 - 9:50"
       title: "受付"
       type: "other"
+    - time: "9:55"
+      title: "連絡"
+      type: "ceremony"
     - time: "10:00 - 11:57"
       title: "口頭発表セッション3（14号館202）"
       type: "oral"

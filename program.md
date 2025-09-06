@@ -203,3 +203,10 @@ title: プログラム
         </table>
     </div>
 </div>
+
+<div style="margin-top: 3rem; padding: 1rem 0; border-top: 1px solid #e0e0e0;">
+    <p style="text-align: center; color: #666; font-size: 0.9rem;">
+        <span class="material-icons" style="font-size: 1rem; vertical-align: text-bottom;">edit_note</span>
+        プログラムについて何かお気づきの点がございましたら、<a href="{{ '/contact' | relative_url }}">お問い合わせページ</a>よりご連絡ください。
+    </p>
+</div>
