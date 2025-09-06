@@ -36,7 +36,7 @@ title: ホーム
                     会場
                 </div>
                 <div class="card-content">
-                    <p>詳細は後日公開予定</p>
+                    <p>愛知工業大学八草キャンパス14号館</p>
                     <p><a href="{{ '/venue' | relative_url }}">会場情報を見る</a></p>
                 </div>
             </div>
