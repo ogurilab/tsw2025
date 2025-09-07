@@ -104,7 +104,13 @@ title: プログラム
                     <strong>{{ session.title }}</strong><br>
                     <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
                     {% for presentation in session.presentations %}
-                        <li style="margin: 0.25rem 0;">{{ presentation.speaker }}: 
+                        <li style="margin: 0.25rem 0;">
+                            <span style="display: inline-block;">
+                                <strong>{{ presentation.speaker }}</strong>
+                                {% if presentation.affiliation and presentation.affiliation != "" %}
+                                <span style="color: #666; font-size: 0.85rem;">（{{ presentation.affiliation }}）</span>
+                                {% endif %}
+                            </span>: 
                             {% if presentation.abstract %}
                             <span class="abstract-tooltip">
                                 {{ presentation.title }}
@@ -131,15 +137,22 @@ title: プログラム
             <tr>
                 <td style="padding: 0.5rem 0.75rem; border: 1px solid #e0e0e0;">
                     <span style="color: #666;">{{ presentation.time }}</span><br>
-                    {{ presentation.speaker }}: 
-                    {% if presentation.abstract %}
-                    <span class="abstract-tooltip">
+                    <div style="margin-top: 0.25rem;">
+                        <strong>{{ presentation.speaker }}</strong>
+                        {% if presentation.affiliation and presentation.affiliation != "" %}
+                        <span style="color: #666; font-size: 0.85rem;">（{{ presentation.affiliation }}）</span>
+                        {% endif %}
+                    </div>
+                    <div style="margin-top: 0.25rem;">
+                        {% if presentation.abstract %}
+                        <span class="abstract-tooltip">
+                            {{ presentation.title }}
+                            <span class="tooltip-content">{{ presentation.abstract }}</span>
+                        </span>
+                        {% else %}
                         {{ presentation.title }}
-                        <span class="tooltip-content">{{ presentation.abstract }}</span>
-                    </span>
-                    {% else %}
-                    {{ presentation.title }}
-                    {% endif %}
+                        {% endif %}
+                    </div>
                 </td>
             </tr>
             {% endfor %}
@@ -182,7 +195,13 @@ title: プログラム
                     <strong>{{ session.title }}</strong><br>
                     <ul style="margin: 0.5rem 0; padding-left: 1.5rem;">
                     {% for presentation in session.presentations %}
-                        <li style="margin: 0.25rem 0;">{{ presentation.speaker }}: 
+                        <li style="margin: 0.25rem 0;">
+                            <span style="display: inline-block;">
+                                <strong>{{ presentation.speaker }}</strong>
+                                {% if presentation.affiliation and presentation.affiliation != "" %}
+                                <span style="color: #666; font-size: 0.85rem;">（{{ presentation.affiliation }}）</span>
+                                {% endif %}
+                            </span>: 
                             {% if presentation.abstract %}
                             <span class="abstract-tooltip">
                                 {{ presentation.title }}
@@ -209,15 +228,22 @@ title: プログラム
             <tr>
                 <td style="padding: 0.5rem 0.75rem; border: 1px solid #e0e0e0;">
                     <span style="color: #666;">{{ presentation.time }}</span><br>
-                    {{ presentation.speaker }}: 
-                    {% if presentation.abstract %}
-                    <span class="abstract-tooltip">
+                    <div style="margin-top: 0.25rem;">
+                        <strong>{{ presentation.speaker }}</strong>
+                        {% if presentation.affiliation and presentation.affiliation != "" %}
+                        <span style="color: #666; font-size: 0.85rem;">（{{ presentation.affiliation }}）</span>
+                        {% endif %}
+                    </div>
+                    <div style="margin-top: 0.25rem;">
+                        {% if presentation.abstract %}
+                        <span class="abstract-tooltip">
+                            {{ presentation.title }}
+                            <span class="tooltip-content">{{ presentation.abstract }}</span>
+                        </span>
+                        {% else %}
                         {{ presentation.title }}
-                        <span class="tooltip-content">{{ presentation.abstract }}</span>
-                    </span>
-                    {% else %}
-                    {{ presentation.title }}
-                    {% endif %}
+                        {% endif %}
+                    </div>
                 </td>
             </tr>
             {% endfor %}
