@@ -76,6 +76,10 @@ title: プログラム
             <span class="material-icons" style="font-size: 1rem; vertical-align: text-bottom;">tips_and_updates</span>
             ポスターは各自で印刷してご持参いただきますようお願いいたします
         </p>
+        <p style="margin-top: 1rem;">
+            <span class="material-icons" style="font-size: 1rem; vertical-align: text-bottom; color: #1976d2;">map</span>
+            <a href="{{ '/venue#venue-map' | relative_url }}">会場案内図はこちら</a>
+        </p>
     </div>
 </div>
 

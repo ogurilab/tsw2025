@@ -15,6 +15,26 @@ title: 会場
     </div>
 </div>
 
+<div class="card" style="margin-top: 2rem;" id="venue-map">
+    <div class="card-title">
+        <span class="material-icons" style="color: #1976d2; vertical-align: middle;">map</span>
+        会場案内図
+    </div>
+    <div class="card-content">
+        <p style="margin-bottom: 1rem;">14号館の会場配置図です。口頭発表は202教室、ポスター発表は204-205、206-207教室で行います。</p>
+        <div style="text-align: center;">
+            <img src="https://i.gyazo.com/c656d0d0177d1d554f0535c70cf404ea.png" 
+                 alt="会場案内図" 
+                 style="max-width: 100%; height: auto; border: 1px solid #e0e0e0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        </div>
+        <div style="margin-top: 1rem; padding: 0.75rem; background-color: #f5f5f5; border-radius: 4px;">
+            <p style="margin: 0.25rem 0;"><strong>202教室：</strong>口頭発表会場</p>
+            <p style="margin: 0.25rem 0;"><strong>204-205教室：</strong>ポスター会場A</p>
+            <p style="margin: 0.25rem 0;"><strong>206-207教室：</strong>ポスター会場B</p>
+        </div>
+    </div>
+</div>
+
 <div class="card" style="margin-top: 2rem;">
     <div class="card-title">会場マップ</div>
     <div class="card-content">
