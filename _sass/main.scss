@@ -282,6 +282,19 @@ main {
       background-color: darken($accent-color, 10%);
     }
   }
+
+  &.btn-outline {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: none;
+
+    &:hover {
+      background-color: white;
+      color: $primary-color;
+      box-shadow: $shadow-1;
+    }
+  }
 }
 
 // Hero section

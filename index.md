@@ -12,6 +12,10 @@ title: ホーム
         <div class="hero-buttons">
             <a href="{{ '/registration' | relative_url }}" class="btn btn-secondary">参加登録</a>
             <a href="{{ '/program' | relative_url }}" class="btn btn-primary">プログラムを見る</a>
+            <a href="{{ '/handout' | relative_url }}" class="btn btn-outline" target="_blank">
+                <span class="material-icons" style="font-size: 1.2rem; vertical-align: middle; margin-right: 0.25rem;">print</span>
+                配布資料（PDF印刷用）
+            </a>
         </div>
     </div>
 </section>
