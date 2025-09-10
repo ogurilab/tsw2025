@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<section class="section">
+    <div class="container" style="max-width: 800px;">
+        <nav aria-label="breadcrumb" style="margin-bottom: 2rem;">
+            <ol style="list-style: none; padding: 0; display: flex; align-items: center; font-size: 0.9rem;">
+                <li><a href="{{ '/' | relative_url }}" style="color: #757575;">ホーム</a></li>
+                <li style="margin: 0 0.5rem; color: #757575;">/</li>
+                <li><a href="{{ '/news' | relative_url }}" style="color: #757575;">お知らせ</a></li>
+                <li style="margin: 0 0.5rem; color: #757575;">/</li>
+                <li style="color: #333;">{{ page.title }}</li>
+            </ol>
+        </nav>
+
+        <div class="card">
+            <div class="card-content">
+                <h1 style="font-size: 1.8rem; margin-bottom: 1rem;">{{ page.title }}</h1>
+                <p style="color: #757575; font-size: 0.9rem; margin-bottom: 2rem;">
+                    <span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">calendar_today</span>
+                    {{ page.date | date: "%Y年%-m月%-d日" }}
+                    {% if page.category %}
+                    <span style="margin-left: 1rem;">
+                        <span class="material-icons" style="font-size: 1rem; vertical-align: middle; margin-right: 0.25rem;">label</span>
+                        {{ page.category }}
+                    </span>
+                    {% endif %}
+                </p>
+                
+                <div style="line-height: 1.8;">
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+
+        <div style="margin-top: 3rem; text-align: center;">
+            <a href="{{ '/news' | relative_url }}" class="btn btn-outline">
+                <span class="material-icons" style="font-size: 1.2rem; vertical-align: middle; margin-right: 0.5rem;">arrow_back</span>
+                お知らせ一覧に戻る
+            </a>
+        </div>
+    </div>
+</section>

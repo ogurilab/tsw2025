@@ -95,13 +95,19 @@ title: ホーム
         <h2 class="section-title">お知らせ</h2>
         {% assign news = site.news | where_exp: "item", "item.draft != true" | sort: "date" | reverse %}
         {% for item in news limit: 3 %}
-        <div class="card">
-            <div class="card-title">{{ item.title }}</div>
-            <div class="card-content">
-                <p style="color: #757575; font-size: 0.9rem;">{{ item.date | date: "%Y年%-m月%-d日" }}</p>
-                <p>{{ item.content | strip_html | truncate: 100 }}</p>
+        <a href="{{ item.url | relative_url }}" style="text-decoration: none; color: inherit;">
+            <div class="card" style="transition: box-shadow 0.3s; cursor: pointer;">
+                <div class="card-title">{{ item.title }}</div>
+                <div class="card-content">
+                    <p style="color: #757575; font-size: 0.9rem;">{{ item.date | date: "%Y年%-m月%-d日" }}</p>
+                    <p>{{ item.content | strip_html | truncate: 100 }}</p>
+                    <p style="color: #1976d2; font-size: 0.9rem; margin-top: 0.5rem;">詳細を見る →</p>
+                </div>
             </div>
-        </div>
+        </a>
         {% endfor %}
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="{{ '/news' | relative_url }}" class="btn btn-outline">すべてのお知らせを見る</a>
+        </div>
     </div>
 </section>

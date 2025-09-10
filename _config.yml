@@ -19,7 +19,7 @@ registration_deadline: "2025年8月31日"
 # Collections
 collections:
   news:
-    output: false
+    output: true
     sort_by: date
   sessions:
     output: false
