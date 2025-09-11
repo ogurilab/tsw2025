@@ -27,6 +27,7 @@
             </button>
             <ul id="nav-menu">
                 <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>ホーム</a></li>
+                <li><a href="{{ '/news' | relative_url }}" {% if page.url == '/news' %}class="active"{% endif %}>お知らせ</a></li>
                 <li><a href="{{ '/program' | relative_url }}" {% if page.url == '/program' %}class="active"{% endif %}>プログラム</a></li>
                 <li><a href="{{ '/registration' | relative_url }}" {% if page.url == '/registration' %}class="active"{% endif %}>参加登録</a></li>
                 <li><a href="{{ '/venue' | relative_url }}" {% if page.url == '/venue' %}class="active"{% endif %}>会場</a></li>
